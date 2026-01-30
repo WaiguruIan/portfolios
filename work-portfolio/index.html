@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ian Waiguru | Digital Architect</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            animation: {
+              glow: "glow 3s infinite ease-in-out",
+              float: "float 6s infinite ease-in-out",
+            },
+            keyframes: {
+              glow: {
+                "0%, 100%": { opacity: 0.4, transform: "scale(1)" },
+                "50%": { opacity: 0.8, transform: "scale(1.1)" },
+              },
+              float: {
+                "0%, 100%": { transform: "translateY(0)" },
+                "50%": { transform: "translateY(-15px)" },
+              },
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body
+    class="bg-mesh dark:text-zinc-100 text-zinc-900 min-h-screen selection:bg-rose-500/30 transition-colors duration-500"
+  >
+    <div id="cursor" class="hidden md:block"></div>
+
+    <nav class="fixed top-6 right-6 z-50">
+      <button
+        onclick="toggleTheme()"
+        class="glass-card p-3 rounded-full hover:rotate-12 transition-transform"
+      >
+        <i data-lucide="sun" class="hidden dark:block"></i>
+        <i data-lucide="moon" class="block dark:hidden"></i>
+      </button>
+    </nav>
+
+    <main class="max-w-4xl mx-auto px-6 py-20 relative">
+      <section class="reveal text-center mb-24">
+        <div class="relative inline-block mb-6">
+          <span
+            class="absolute inset-0 rounded-full bg-rose-500 blur-2xl opacity-20 animate-glow"
+          ></span>
+          <img
+            src="https://api.dicebear.com/8.x/notionists/svg?seed=Jasper&scale=90&radius=50&backgroundColor=ffebee"
+            alt="Avatar"
+            class="relative size-32 rounded-full border-2 border-rose-500 p-1 bg-zinc-900"
+          />
+        </div>
+        <h1
+          class="text-7xl md:text-6xl font-black tracking-tighter mb-10 gradient-text leading-tight"
+        >
+          Hi, im Ian Waiguru <br />
+          Digital Architect.
+        </h1>
+        <p
+          class="text-2xl dark:text-zinc-400 text-zinc-600 max-w-xl mx-auto leading-relaxed"
+        >
+          I Build custom web engines for
+          <span class="text-rose-500 font-semibold">Local Businesses</span> and
+          <span class="text-rose-500 font-semibold">Professional Firms</span>
+          across Kenya.
+        </p>
+      </section>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-24">
+        <div
+          class="reveal glass-card card-rose p-8 rounded-3xl md:col-span-2 animate-float"
+        >
+          <div class="flex justify-between items-start mb-4">
+            <i data-lucide="shopping-cart" class="text-rose-500"></i>
+            <span class="text-xs font-mono opacity-50">01 / RETAIL</span>
+          </div>
+          <h3 class="text-2xl font-bold mb-2">Hardware Kits</h3>
+          <p class="dark:text-zinc-400 text-zinc-600">
+            Digital catalogs with WhatsApp ordering for construction & hardware
+            stores.
+          </p>
+        </div>
+
+        <div
+          class="reveal glass-card card-blue p-8 rounded-3xl animate-float delay-1"
+        >
+          <i data-lucide="graduation-cap" class="text-blue-500 mb-4"></i>
+          <h3 class="text-2xl font-bold mb-2">School Portals</h3>
+          <p class="dark:text-zinc-400 text-zinc-600">
+            Professional sites for modern Private Academies.
+          </p>
+        </div>
+
+        <div
+          class="reveal glass-card card-purple p-8 rounded-3xl animate-float delay-2"
+        >
+          <i data-lucide="scale" class="text-purple-500 mb-4"></i>
+          <h3 class="text-2xl font-bold mb-2">Pro Firms</h3>
+          <p class="dark:text-zinc-400 text-zinc-600">
+            High-trust presence for Lawyers & Audit firms.
+          </p>
+        </div>
+
+        <div
+          class="reveal glass-card card-yellow p-8 rounded-3xl md:col-span-2 animate-float delay-3"
+        >
+          <div class="flex justify-between items-start mb-4">
+            <i data-lucide="zap" class="text-yellow-400"></i>
+            <span class="text-xs font-mono opacity-50">SPEED TEST: 99/100</span>
+          </div>
+          <h3 class="text-2xl font-bold mb-2">Optimized for Kenya</h3>
+          <p class="dark:text-zinc-400 text-zinc-600">
+            Built to load instantly on 3G/4G mobile networks, ensuring you never
+            lose a customer.
+          </p>
+        </div>
+      </div>
+
+      <section class="reveal mb-24">
+        <h2
+          class="text-5xl md:text-6xl font-black text-center mb-6 gradient-text"
+        >
+          Simple, Transparent Pricing
+        </h2>
+        <p class="text-center dark:text-zinc-400 text-zinc-600 text-xl mb-16">
+          No hidden fees. No monthly charges. Pay once, own forever.
+        </p>
+
+        <div class="grid md:grid-cols-2 gap-8">
+          <div
+            class="glass-card p-10 rounded-[40px] group hover:border-rose-500/50"
+          >
+            <div class="flex items-center justify-between mb-6">
+              <h3 class="text-2xl font-bold">Starter</h3>
+              <div
+                class="bg-blue-500/20 text-blue-500 px-4 py-1 rounded-full text-sm font-bold"
+              >
+                POPULAR
+              </div>
+            </div>
+            <div class="mb-8">
+              <div class="flex items-baseline gap-2">
+                <span class="text-6xl font-black text-rose-500">2,200</span>
+                <span class="text-2xl dark:text-zinc-400">Ksh</span>
+              </div>
+              <p class="text-sm dark:text-zinc-500 mt-2">One-time payment</p>
+            </div>
+            <div class="space-y-4 mb-8">
+              <div class="pricing-feature flex items-center gap-3">
+                <i data-lucide="check-circle" class="w-5 h-5 text-green-500"></i
+                ><span>5 Page Website</span>
+              </div>
+              <div class="pricing-feature flex items-center gap-3">
+                <i data-lucide="check-circle" class="w-5 h-5 text-green-500"></i
+                ><span>Mobile Responsive</span>
+              </div>
+              <div class="pricing-feature flex items-center gap-3">
+                <i data-lucide="check-circle" class="w-5 h-5 text-green-500"></i
+                ><span>WhatsApp Integration</span>
+              </div>
+              <div class="pricing-feature flex items-center gap-3">
+                <i data-lucide="check-circle" class="w-5 h-5 text-green-500"></i
+                ><span>SEO Basics</span>
+              </div>
+              <div class="pricing-feature flex items-center gap-3">
+                <i data-lucide="check-circle" class="w-5 h-5 text-green-500"></i
+                ><span>2 Weeks Delivery</span>
+              </div>
+            </div>
+            <button
+              class="w-full ripple bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-2xl font-bold"
+            >
+              Get Started
+            </button>
+          </div>
+
+          <div
+            class="glass-card p-10 rounded-[40px] group border-2 border-rose-500/50 relative"
+          >
+            <div
+              class="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-rose-500 to-orange-500 text-white px-6 py-2 rounded-full text-sm font-bold shadow-xl"
+            >
+              BEST VALUE
+            </div>
+            <div class="flex items-center justify-between mb-6 mt-4">
+              <h3 class="text-2xl font-bold">Premium</h3>
+              <div
+                class="bg-rose-500/20 text-rose-500 px-4 py-1 rounded-full text-sm font-bold"
+              >
+                PRO
+              </div>
+            </div>
+            <div class="mb-8">
+              <div class="flex items-baseline gap-2">
+                <span
+                  class="text-6xl font-black bg-gradient-to-r from-rose-500 to-orange-500 bg-clip-text text-transparent"
+                  >3,000</span
+                >
+                <span class="text-2xl dark:text-zinc-400">Ksh</span>
+              </div>
+              <p class="text-sm dark:text-zinc-500 mt-2">
+                One-time payment + Free Updates
+              </p>
+            </div>
+            <div class="space-y-4 mb-8">
+              <div class="pricing-feature flex items-center gap-3">
+                <i data-lucide="check-circle" class="w-5 h-5 text-rose-500"></i
+                ><span class="font-semibold">Everything in Starter, plus:</span>
+              </div>
+              <div class="pricing-feature flex items-center gap-3">
+                <i data-lucide="check-circle" class="w-5 h-5 text-rose-500"></i
+                ><span>Unlimited Pages</span>
+              </div>
+              <div class="pricing-feature flex items-center gap-3">
+                <i data-lucide="check-circle" class="w-5 h-5 text-rose-500"></i
+                ><span>Advanced Animations</span>
+              </div>
+              <div class="pricing-feature flex items-center gap-3">
+                <i data-lucide="check-circle" class="w-5 h-5 text-rose-500"></i
+                ><span>E-commerce Ready</span>
+              </div>
+              <div class="pricing-feature flex items-center gap-3">
+                <i data-lucide="check-circle" class="w-5 h-5 text-rose-500"></i
+                ><span>1 Week Delivery</span>
+              </div>
+            </div>
+            <button
+              class="w-full ripple bg-gradient-to-r from-rose-600 to-orange-600 text-white px-8 py-4 rounded-2xl font-bold"
+            >
+              Go Premium
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="reveal glass-card p-12 rounded-[40px] text-center border-rose-500/20"
+      >
+        <h2 class="text-6xl md:text-7xl font-black mb-8 gradient-text">
+          Let's Build Something Amazing
+        </h2>
+        <p
+          class="dark:text-zinc-400 text-zinc-600 mb-6 text-2xl max-w-3xl mx-auto font-light"
+        >
+          Get your business online in
+          <span class="text-rose-500 font-bold">7 days</span>
+        </p>
+        <p class="dark:text-zinc-500 text-zinc-500 mb-12 text-lg">
+          ✓ No hidden fees • ✓ Own your website • ✓ Lifetime support
+        </p>
+
+        <div class="flex flex-col md:flex-row justify-center gap-6">
+          <a
+            href="https://wa.me/254797229786?text=Hi!%20I%27d%20like%20you%20to%20build%20me%20a%20website"
+            class="ripple bg-gradient-to-r from-rose-600 via-orange-600 to-rose-600 bg-[length:200%] hover:bg-right text-white px-14 py-6 rounded-full font-black text-xl flex items-center justify-center gap-4 group"
+          >
+            <i data-lucide="message-circle" class="w-6 h-6"></i
+            ><span>WhatsApp Me</span>
+          </a>
+          <button
+            onclick="window.scrollTo({top:0, behavior:'smooth'})"
+            class="ripple border-2 border-rose-500/40 hover:border-rose-500 hover:bg-rose-500/10 px-14 py-6 rounded-full font-bold text-xl flex items-center justify-center gap-3"
+          >
+            <i data-lucide="arrow-up" class="w-6 h-6"></i
+            ><span>Back to Top</span>
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
